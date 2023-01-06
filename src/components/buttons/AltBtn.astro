@@ -1,18 +1,15 @@
 ---
-const { text } = Astro.props;
+const { text,display } = Astro.props;
+const classes = ` ${ display } text-white hover:text-black hover:bg-white border-2 border-yellow-400 font-bold p-2 rounded-3xl transition duration-500`
 ---
 
-<li
-    class="
-    block
-     text-white
-     hover:text-black
-      hover:bg-white
-       border-2
-        border-yellow-400
-         font-bold
-          p-2
-           rounded-3xl
-           transition duration-500">
-    <a href="#">{text}</a>
+<li>
+    <a
+        href="#"
+        class={classes}>
+        {text}</a
+    >
 </li>
+
+
+

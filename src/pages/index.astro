@@ -1,20 +1,53 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import NavItem from "../components/NavItem.astro";
+import AltBtn from "../components/AltBtn.astro";
 ---
 
 <Layout title="First Tailwind ">
 	<main>
-		<div class="container bg-amber-200 mx-auto">
-			<nav class="bg-gray-800">
-				<nav class="bg-gray-600 flex justify-between items-center">
-					<div class="Logo p-2">
-						<h3 class="text-3xl font-serif">
+		<div class="mx-auto">
+			<nav class="bg-gray-800 flex justify-between lg:justify-start items-center">
+				<div class="Logo p-2 w-1/6">
+					<img src="img/logo.png" width="100" alt="" />
+				</div>
+				<!--TODO: Large Menu -->
+				<div class="links lg:block hidden w-1/6 lg:w-4/6">
+					<ul class="menu flex items-center justify-center gap-5">
+						<NavItem text="Home"></NavItem>
+						<NavItem text="Play Together"></NavItem>
+						<NavItem text="Explore"></NavItem>
+						<AltBtn text="Bowser Fury"></AltBtn>
+						<li class="block text-white font-bold rounded-full bg-red-600 p-3 hover:bg-white hover:text-black transition duration-500">
+							<a href="#">Buy Now</a>
+						</li>
 						
-						</h3>
-					</div>
-				</nav>
+					</ul>
+				</div>
+				<!--TODO: Mobile menu -->
+				<div class="links block lg:hidden w-1/6 lg:w-4/6">
+					<a href="#" id="mobile-menu" class="block text-white hover:text-lime-400 font-bold p-3">Menu</a>
+					<ul class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-gray-800 transition ">
+						<NavItem text="Home"></NavItem>
+						<NavItem text="Play Together"></NavItem>
+						<NavItem text="Explore"></NavItem>
+						<AltBtn text="Bowser Fury"></AltBtn>
+						<li class="block text-white font-bold rounded-full bg-red-600 p-3 hover:bg-white hover:text-black transition duration-500">
+							<a href="#">Buy Now</a>
+						</li>
+						
+					</ul>
+				</div>
 			</nav>
 		</div>
+		<script>
+			const menuButton = document.querySelector("#mobile-menu");
+
+			menuButton.addEventListener('click',e => {
+				const menu = document.querySelector('.mobile-links');
+				menu.classList.toggle('hidden');
+			});
+		</script>
 	</main>
 </Layout>

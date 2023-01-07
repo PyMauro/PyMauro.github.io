@@ -4,13 +4,21 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: theme => ({
-				'wave-pattern': "url('../public/img/wave-white.png')",
-				'wave-pattern-dots': "url('../public/img/pattern-white-dots.png')",
-				'wave-pink': "url('../public/img/wave-pink')"
+				'wave-pattern': "url('/img/wave-white.png')",
+				'wave-pattern-dots': "url('/img/pattern-white-dots.png')",
+				'wave-pink': "url('/img/wave-pink.png')",
+				'pattern-characters-red': "url('/img/pattern-characters-red.png')",
+				'yellow-dots': "url('/img/pattern-yellow-dots.png')",
+				'character-mario': "url('public/img/character-l.png')",
 			})
 		},
-		screens:{
-			'xsm':'390px'
+		screens: {
+			'xsm': '480px',
+			'sm': '640px',
+			'md': '768px',
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1536px',
 		}
 	},
 	plugins: [

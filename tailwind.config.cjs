@@ -9,7 +9,7 @@ module.exports = {
 				'wave-pink': "url('/img/wave-pink.png')",
 				'pattern-characters-red': "url('/img/pattern-characters-red.png')",
 				'yellow-dots': "url('/img/pattern-yellow-dots.png')",
-				'character-mario': "url('public/img/character-l.png')",
+				'character-mario': "url('img/character-l.png')",
 			})
 		},
 		screens: {

@@ -1,6 +1,8 @@
 ---
 import Header from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+import Coin from "../components/Coin.astro";
+import CardBtn from "../components/buttons/CardBtn.astro";
 ---
 
 <Layout title="First Tailwind ">
@@ -48,7 +50,7 @@ import Layout from "../layouts/Layout.astro";
 					>
 						<div class="cover bg-black">
 							<video
-								src="public/videos/video01.mp4"
+								src="videos/video01.mp4"
 								autoplay
 								loop
 								muted></video>
@@ -62,17 +64,7 @@ import Layout from "../layouts/Layout.astro";
 							<p class="text-xl">
 								Work with (or aganist) your friends and family*
 							</p>
-							<a
-								href="#"
-								class="xl:text-2xl my-4 inline-block py-2 px-16 bg-red-500 text-white font-black border-transparent border-8 rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-500 group"
-							>
-								Watch The Trailer
-
-								<!-- Usando group y group-hover se puede hacer una animacion zarpada para flechitas -->
-								<span
-									class="w-4 h-4 inline-block border-yellow-300 border-solid border-t-[5px] border-r-[5px] transition-all transform rotate-45 group-hover:border-red-500 xl:group-hover:ml-4"
-								></span>
-							</a>
+							<CardBtn text="Watch The Trailer" />
 						</div>
 						<div class="dots flex justify-between p-4">
 							<div class="dot h-3 w-3 bg-blue-600 rounded-full">
@@ -116,7 +108,7 @@ import Layout from "../layouts/Layout.astro";
 
 						<div class="cover bg-black">
 							<video
-								src="public/videos/video02.mp4"
+								src="videos/video02.mp4"
 								autoplay
 								loop
 								muted></video>
@@ -130,32 +122,18 @@ import Layout from "../layouts/Layout.astro";
 						>
 							<!--* Card Title  -->
 
-							<h3 class="font-black text-4xl py-10">
-								Explore
-							</h3>
+							<h3 class="font-black text-4xl py-10">Explore</h3>
 
 							<!--* Card Subtitle -->
 							<p class="text-xl">
-								Explore the Biggest Fantasy History 
+								Explore the Biggest Fantasy History
 							</p>
 
 							<!--* Card Button -->
-							<a
-								href="#"
-								class="xl:text-2xl my-4 inline-block py-2 px-16 bg-red-500 text-white font-black border-transparent border-8 rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-500 group"
-							>
-								Watch The Trailer
-
-								<!-- Usando group y group-hover se puede hacer una animacion zarpada para flechitas -->
-								<!--* Arrow like Triangle  -->
-								<span
-									class="w-4 h-4 inline-block border-yellow-300 border-solid border-t-[5px] border-r-[5px] transition-all transform rotate-45 group-hover:border-red-500 xl:group-hover:ml-4"
-								></span>
-							</a>
-
+							<CardBtn text="Watch The Trailer" />
 						</div>
 						<!--* Decoration bottom dots -->
-						
+
 						<div class="dots flex justify-between p-4">
 							<div class="dot h-3 w-3 bg-blue-600 rounded-full">
 							</div>
@@ -164,6 +142,68 @@ import Layout from "../layouts/Layout.astro";
 						</div>
 					</div>
 					<!--TODO: END of Card -->
+				</div>
+			</div>
+			<!--TODO: FOOTER section -->
+			<div
+				class="footer text-center flex justify-center gap-9 pt-10 w-auto"
+			>
+				<Coin add="md:block" />
+				<Coin add="md:block" />
+				<Coin add="xsm:block" />
+				<Coin add="xsm:block" />
+				<Coin add="xsm:block" />
+			</div>
+		</section>
+		<section class="bg-yellow-dots">
+			<div class="bg-wave-pink h-6 relative bg-repeat-x -top-4"></div>
+			<div
+				class="xsm:w-full sm:container w-2/3 mx-auto md:flex block justify-center items-center text-center py-6"
+			>
+				<div class="left xl:w-1/3 lg:w-1/2 p-5">
+					<h3
+						class="text-yellow-900 font-black xsm:text-3xl sm:text-4xl"
+					>
+						Cat <br /> Transformation <br /> Center
+					</h3>
+					<p class="py-4 text-xl">
+						We're not kitten-transform into a cat-tastic new you!
+					</p>
+					<p>
+						<CardBtn text="Meow!" />
+					</p>
+				</div>
+				<div class="right xl:w-2/3 lg:w-1/2">
+					<img src="img/activity_img3.png" alt="" class="md:w-full" />
+				</div>
+			</div>
+		</section>
+		<section class="bg-black">
+			<div class="bg-wave-pattern bg-repeat-x h-6 relative -top-4"></div>
+			<div class="container mx-auto text-center py-10 w-2/3">
+				<div class="pb-5">
+					<CardBtn text="Customer Support" />
+				</div>
+				<div class="text-white">
+					<p class="py-2">
+						*Additional games,systems and/or accesories may be
+						required for multiplayer mode
+					</p>
+					<p class="py-2">
+						** Nintendo Switch Online membership (sold separately)
+						and Nintendo Account required for online features. Not
+						available in all countries. Internet access required for
+						online features. A Nintendo Account is required to
+						receive and redeem My Nintendo points.
+					</p>
+					<p class="py-2">
+						Game, systems, some accessories and amiibo sold
+						separately.
+					</p>
+					<p class="py-2">
+						©2013-2021 Nintendo. Super Mario and Nintendo Switch are
+						trademarks of Nintendo.
+					</p>
 				</div>
 			</div>
 		</section>

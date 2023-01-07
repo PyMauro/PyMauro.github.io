@@ -4,23 +4,168 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="First Tailwind ">
-	<main class="xsm:w-auto w-[1280px] mx-auto">
-		<Header></Header>
+	<main>
+		<!--TODO: Header and nav Section  -->
+
+		<Header />
 		<section class="header">
-			<img src="img/hero.jpg" alt="">
+			<img src="img/hero.jpg" alt="" />
 		</section>
 
+		<!--TODO: Divisor and button section -->
 		<section>
 			<div class="bg-wave-pattern h-6 bg-repeat-x relative -top-2"></div>
-			<div class="bg-wave-pattern-dots text-center p-4 flex md:flex-row flex-col gap-3 justify-center">
-				<a href="#" class="inline-block py-3 px-16 bg-black text-white font-bold border-transparent border-8 text-2xl rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200">
-					Buy Now</a>
-				<a href="#" class="inline-block py-3 px-16 bg-red-500 text-white font-bold border-transparent border-8 text-2xl rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200">
-					Watch the Trailer</a>	
+			<div
+				class="bg-wave-pattern-dots text-center p-4 flex md:flex-row flex-col gap-3 justify-center"
+			>
+				<a
+					href="#"
+					class="inline-block py-3 px-16 bg-black text-white font-bold border-transparent border-8 text-2xl rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200"
+				>
+					Buy Now</a
+				>
+				<a
+					href="#"
+					class="inline-block py-3 px-16 bg-red-500 text-white font-bold border-transparent border-8 text-2xl rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200"
+				>
+					Watch the Trailer</a
+				>
 			</div>
-			
+
 			<div class="bg-wave-pattern bg-repeat-x h-6 relative top-2"></div>
 		</section>
-		<section class="bg-red-500 h-6"></section>
+
+		<!--TODO: Cards Section -->
+		<section class="bg-pattern-characters-red py-28">
+			<div class="lg:container mx-auto md:flex gap-5 md:w-full p-3">
+				<!--TODO: Left Section  -->
+				<div
+					class="left bg-character-mario bg-no-repeat bg-contain bg-top w-5/6 md:w-1/2 pt-52 mx-auto"
+				>
+					<!--TODO: Card -->
+					<div
+						class="card text-center bg-white 2xl:w-5/6 mx-auto mt-72 rounded-2xl overflow-hidden xl:w-4/5"
+					>
+						<div class="cover bg-black">
+							<video
+								src="public/videos/video01.mp4"
+								autoplay
+								loop
+								muted></video>
+						</div>
+						<div
+							class="content bg-wave-pattern bg-repeat-x relative -top-3"
+						>
+							<h3 class="font-black text-4xl py-10">
+								Play Together
+							</h3>
+							<p class="text-xl">
+								Work with (or aganist) your friends and family*
+							</p>
+							<a
+								href="#"
+								class="xl:text-2xl my-4 inline-block py-2 px-16 bg-red-500 text-white font-black border-transparent border-8 rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-500 group"
+							>
+								Watch The Trailer
+
+								<!-- Usando group y group-hover se puede hacer una animacion zarpada para flechitas -->
+								<span
+									class="w-4 h-4 inline-block border-yellow-300 border-solid border-t-[5px] border-r-[5px] transition-all transform rotate-45 group-hover:border-red-500 xl:group-hover:ml-4"
+								></span>
+							</a>
+						</div>
+						<div class="dots flex justify-between p-4">
+							<div class="dot h-3 w-3 bg-blue-600 rounded-full">
+							</div>
+							<div class="dot h-3 w-3 bg-blue-600 rounded-full">
+							</div>
+						</div>
+					</div>
+					<!--TODO: END of Card -->
+				</div>
+				<!--TODO: End Left Size  -->
+
+				<!--TODO: Right Size -->
+				<div class="right w-5/6 md:w-1/2 text-center mx-auto">
+					<!--* Title  -->
+
+					<h2 class="font-black text-white text-6xl py-8">
+						Avaiable Now
+					</h2>
+
+					<!--* Subtitle -->
+					<p
+						class="font-bold text-white text-2xl mx-auto py-10 w-4/5"
+					>
+						Team up for a paws-itievely adorable adventure!
+					</p>
+
+					<!--*Content -->
+					<p class="text-white mx-auto w-4/5">
+						Bowser is up to his old tricks again and only Mario and
+						his friends can save the day! Use power-ups like the
+						Super Bell, which grants catlike abilities like climbing
+						and scratching, to overcome Bowser and his minions.
+					</p>
+
+					<!--TODO: Card -->
+					<div
+						class="card text-center bg-white 2xl:w-3/5 mx-auto mt-32 rounded-2xl overflow-hidden xl:w-4/5"
+					>
+						<!--* Video -->
+
+						<div class="cover bg-black">
+							<video
+								src="public/videos/video02.mp4"
+								autoplay
+								loop
+								muted></video>
+						</div>
+
+						<!--* Wave Divisor -->
+
+						<!--* Text Content -->
+						<div
+							class="content bg-wave-pattern bg-repeat-x relative -top-3"
+						>
+							<!--* Card Title  -->
+
+							<h3 class="font-black text-4xl py-10">
+								Explore
+							</h3>
+
+							<!--* Card Subtitle -->
+							<p class="text-xl">
+								Explore the Biggest Fantasy History 
+							</p>
+
+							<!--* Card Button -->
+							<a
+								href="#"
+								class="xl:text-2xl my-4 inline-block py-2 px-16 bg-red-500 text-white font-black border-transparent border-8 rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-500 group"
+							>
+								Watch The Trailer
+
+								<!-- Usando group y group-hover se puede hacer una animacion zarpada para flechitas -->
+								<!--* Arrow like Triangle  -->
+								<span
+									class="w-4 h-4 inline-block border-yellow-300 border-solid border-t-[5px] border-r-[5px] transition-all transform rotate-45 group-hover:border-red-500 xl:group-hover:ml-4"
+								></span>
+							</a>
+
+						</div>
+						<!--* Decoration bottom dots -->
+						
+						<div class="dots flex justify-between p-4">
+							<div class="dot h-3 w-3 bg-blue-600 rounded-full">
+							</div>
+							<div class="dot h-3 w-3 bg-blue-600 rounded-full">
+							</div>
+						</div>
+					</div>
+					<!--TODO: END of Card -->
+				</div>
+			</div>
+		</section>
 	</main>
 </Layout>
